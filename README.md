@@ -24,7 +24,7 @@
 ## 🧑‍💻 About Me
 
 ```yaml
-name: Serah Dah
+name: IkoNaXMN
 alias: KorekKayu
 location: Indonesia 🇮🇩
 interests:
