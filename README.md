@@ -24,10 +24,7 @@
 
 ### ⚡ About Me
 
-- 🚀 Currently working on **[9router-vercel-relay-ext](https://github.com/KorekKayu/9router-vercel-relay-ext)** (Vercel Relay Assistant for 9Router).
-- 🛠️ Specializing in **Chrome Extensions (Manifest V3)**, **Automation**, and **Web Applications**.
-- 💬 Ask me about **Vercel Relays, 9Router, Web Automation, and JavaScript Extensions**.
-- 📫 Reach me on Telegram: **[@Ikona_Oni](https://t.me/Ikona_Oni)**
+- FUCK MY LIFE !!!
 
 ---
 
