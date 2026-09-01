@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="oni_banner.png" width="100%" alt="IKONA ONI Banner" />
+  <img src="ikona_header.png" width="100%" alt="IKONA INC Logo" />
   
   <br><br>
 
