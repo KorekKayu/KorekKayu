@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="ikona_header.png" width="100%" alt="IKONA INC Logo" />
+  <img src="ikona_logo.png" width="280" alt="IKONA INC Logo" style="border-radius: 16px;" />
   
   <br><br>
 
