@@ -57,19 +57,7 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=KorekKayu&theme=radical&hide_border=true&background=0D1117&stroke=EF4444&alarm=EF4444" width="98%" />
 </div>
 
----
 
-### 🔥 Featured Projects & Ecosystem
-
-| Project | Description | Tech Stack |
-| :--- | :--- | :--- |
-| 👹 **[9router-vercel-relay-ext](https://github.com/KorekKayu/9router-vercel-relay-ext)** | Chrome Extension Manifest V3 untuk auto-fill & auto-deploy Vercel Relay di 9Router Proxy. | JavaScript, Manifest V3, HTML/CSS |
-| 🤖 **IKONA Metode Telegram Suite** | Automation bot suite untuk alur kerja otomatisasi Telegram & interaksi bot. | Node.js, Python, Telegram API |
-| 🌐 **Global Multi-Country Form Filler** | Chrome Extension untuk pengisian otomatis formulir registrasi & checkout multi-negara. | JavaScript, Manifest V3, Chrome Storage |
-| 💳 **VCC Billing & Cloud Store Web Hub** | Sistem toko web cloud file manager & payment flow VCC dengan admin panel lengkap. | PHP, HTML/CSS, MySQL/Supabase |
-| 🎮 **Pragmatic Play Slot Control Panel** | Dashboard panel kontrol & sistem pengaturan slot Pragmatic Play. | JavaScript, Node.js, Web Dashboard |
-| 🎭 **AdsPower Anti-Detect Automation** | Sistem automasi browser anti-detect AdsPower dengan Playwright & deteksi offer. | Python, Playwright, AdsPower API |
-| 🎨 **Adobe Checkout & Creator Hub** | Sistem otomatisasi checkout & pembuatan akun Adobe secara hands-free. | Python, Selenium/Playwright |
 
 ---
 
