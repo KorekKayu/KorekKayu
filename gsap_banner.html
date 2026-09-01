@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IKONA ONI - GSAP Cyber Animated Banner</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=JetBrains+Mono:wght@500;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: #09090b;
+      color: #f4f4f5;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .banner-container {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 320px;
+      background: radial-gradient(circle at 50% 50%, #1f0808 0%, #09090b 100%);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(185, 28, 28, 0.25), inset 0 0 30px rgba(185, 28, 28, 0.15);
+      overflow: hidden;
+    }
+    /* Grid Canvas Pattern */
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(239, 68, 68, 0.07) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(239, 68, 68, 0.07) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 1;
+    }
+    /* Floating Particles */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: #ef4444;
+      pointer-events: none;
+      z-index: 2;
+    }
+    /* Content Elements */
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+    .oni-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(185, 28, 28, 0.2);
+      border: 1px solid #ef4444;
+      color: #fca5a5;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+    }
+    .title {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffffff 0%, #fca5a5 50%, #ef4444 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      text-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+    }
+    .subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      color: #a1a1aa;
+      max-width: 600px;
+      line-height: 1.5;
+    }
+    .glow-orb {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.4) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      filter: blur(20px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner-container" id="banner">
+    <div class="bg-grid"></div>
+    <div class="glow-orb" id="glowOrb"></div>
+    
+    <div class="content">
+      <div class="oni-badge" id="badge">
+        <span>👹</span>
+        <span>IKONA INC • DEV ECOSYSTEM</span>
+      </div>
+      <h1 class="title" id="title">KorekKayu // IKONA ONI</h1>
+      <p class="subtitle" id="subtitle">Building Automation Tools, Chrome Extensions & Web Applications</p>
+    </div>
+  </div>
+
+  <!-- GSAP 3 CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const banner = document.getElementById("banner");
+
+      // 1. Create Floating Cyber Particles
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        const size = Math.random() * 6 + 2;
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.top = `${Math.random() * 100}%`;
+        p.style.opacity = Math.random() * 0.7 + 0.3;
+        banner.appendChild(p);
+
+        // GSAP Floating Motion per particle
+        gsap.to(p, {
+          y: `-=${Math.random() * 60 + 20}`,
+          x: `+=${Math.random() * 40 - 20}`,
+          opacity: 0.1,
+          duration: Math.random() * 3 + 2,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: Math.random() * 2
+        });
+      }
+
+      // 2. GSAP Main Entrance Timeline
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+      tl.from("#banner", {
+        scale: 0.85,
+        opacity: 0,
+        duration: 1.2,
+        boxShadow: "0 0 0px rgba(185, 28, 28, 0)"
+      })
+      .from("#glowOrb", {
+        scale: 0,
+        opacity: 0,
+        duration: 1.5,
+        ease: "elastic.out(1, 0.5)"
+      }, "-=0.8")
+      .from("#badge", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8
+      }, "-=1")
+      .from("#title", {
+        y: 40,
+        opacity: 0,
+        skewY: 3,
+        duration: 1
+      }, "-=0.6")
+      .from("#subtitle", {
+        y: 20,
+        opacity: 0,
+        duration: 0.8
+      }, "-=0.5");
+
+      // 3. Continuous Pulsing Pulse Effects
+      gsap.to("#glowOrb", {
+        scale: 1.3,
+        opacity: 0.6,
+        duration: 2.5,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+
+      gsap.to("#badge", {
+        borderColor: "#fca5a5",
+        boxShadow: "0 0 25px rgba(239, 68, 68, 0.8)",
+        duration: 1.8,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut"
+      });
+
+      // 4. Interactive Mouse Tilt Effect
+      banner.addEventListener("mousemove", (e) => {
+        const rect = banner.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        gsap.to(banner, {
+          rotateY: x * 0.03,
+          rotateX: -y * 0.03,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+
+      banner.addEventListener("mouseleave", () => {
+        gsap.to(banner, {
+          rotateY: 0,
+          rotateX: 0,
+          duration: 0.8,
+          ease: "elastic.out(1, 0.5)"
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
