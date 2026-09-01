@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:b91c1c,50:ef4444,100:09090b&height=220&section=header&text=KorekKayu%20//%20IKONA%20ONI&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=38" width="100%"/>
+  <img src="banner.svg" width="100%"/>
   
   <h1>👹 Hey there! I'm KorekKayu (IKONA ONI)</h1>
   
