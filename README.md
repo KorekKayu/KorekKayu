@@ -3,9 +3,7 @@
   
   <br><br>
 
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=800&size=32&duration=3000&pause=1000&color=EF4444&center=true&vCenter=true&width=800&height=70&lines=👹+Hey%2C+I'm+KorekKayu+(IKONA+ONI);⚡+Chrome+Extension+%26+Automation+Developer;🚀+Creator+%26+Lead+Dev+at+IKONA+INC" alt="Typing SVG" />
-  </a>
+  <h1>👹 Hey there! I'm KorekKayu (IKONA ONI)</h1>
   
   <p align="center">
     <b>Developer & Creator at IKONA INC</b><br>
